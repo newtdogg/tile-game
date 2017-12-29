@@ -21,9 +21,8 @@ RSpec.configure do |config|
   require 'capybara'
   require 'capybara/rspec'
   require 'rspec'
-  require 'web_helpers.rb'
 
-  Capybara.app = Battle
+  Capybara.app = Tilegame
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

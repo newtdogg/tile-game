@@ -1,0 +1,67 @@
+.basesquare {
+  width: 110vmin;
+  height: 90vmin;
+}
+
+.tilebutton {
+  display: block;
+}
+
+.startingsquare {
+  background: red;
+  margin: 2px;
+  color: white;
+  font-weight: bold;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.startingoptions {
+  background: green;
+  margin: 2px;
+  color: white;
+  font-weight: bold;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+body {
+  margin: 20px;
+}
+
+.grid {
+  margin: 20px;
+  font-size: 1rem;
+}
+.row {
+  display: flex;
+}
+.box {
+  margin: 2px;
+  color: white;
+  font-weight: bold;
+  flex: 1 0 auto;
+  position: relative;
+}
+.box:after {
+  content: "";
+  float:left;
+  display: block;
+  padding-top: 100%;
+}
+
+.menu {
+  margin: 15px;
+  width: 40%;
+}
+
+.menuoptions{
+  background-color: grey;
+  padding: 2%;
+  margin: 5px;
+}
+.menuoptions2{
+  background-color: red;
+  padding: 2%;
+  margin: 5px;
+}
