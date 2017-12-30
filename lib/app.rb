@@ -1,19 +1,26 @@
 require "sinatra/base"
-require_relative "tiles"
-require_relative "ruby_file_2"
+require_relative "tile"
+require_relative "game"
 
 class Tilegame < Sinatra::Base
   enable :sessions
+  @game = Game.create
+
+  before do
+    @game = Game.instance
+  end
 
   get '/home' do
-    erb(:start)
+    @turn_number = @game.turn
+    erb(:home)
   end
 
   post '/home' do
-    session[:tile] = params[:tile]
-    p session[:tile]
+    @game.starting_tile(params[:tile])
+    @game.endturn
     redirect '/home'
   end
+
 
   run! if app_file == $0
 
